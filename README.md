@@ -1,140 +1,101 @@
 # 🛒 AI E-Commerce Product & FAQ Assistant
 
-An AI-powered E-Commerce Chatbot that enables users to search products, explore pricing information, check ratings and discounts, and receive intelligent answers to frequently asked questions through a conversational interface.
+[![Python](https://img.shields.io/badge/Python-3.12-blue)]()
+[![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)]()
+[![Groq](https://img.shields.io/badge/Groq-LLM-orange)]()
+[![ChromaDB](https://img.shields.io/badge/ChromaDB-VectorDB-purple)]()
+[![SQLite](https://img.shields.io/badge/SQLite-Database-lightgrey)]()
 
-The application combines Retrieval-Augmented Generation (RAG), Semantic Routing, Vector Search, and Large Language Models to deliver a smart shopping assistant experience.
+An AI-powered E-Commerce Chatbot that combines **Semantic Routing**, **Vector Search**, **RAG (Retrieval-Augmented Generation)**, and **Large Language Models** to provide intelligent FAQ assistance and product search capabilities.
 
 ---
 
 ## 🚀 Features
 
 ### 📖 FAQ Assistant
+- Semantic FAQ Retrieval
+- ChromaDB Vector Search
+- Context-Aware AI Responses
+- Groq Llama 3.3 Integration
 
-* Semantic FAQ search using ChromaDB
-* Vector embeddings using Sentence Transformers
-* AI-generated contextual answers using Groq Llama 3.3
-* Fast retrieval of customer support information
+### 🛍 Product Search
+- SQLite Product Database
+- Product Filtering
+- Rating-Based Search
+- Discount Search
+- Brand Search
+- Price-Based Search
 
-### 🛍 Product Search Assistant
+### 🧠 AI Routing
+- Semantic Router
+- Intent Classification
+- Dynamic Query Routing
 
-* Product search from SQLite database
-* Product pricing queries
-* Rating-based filtering
-* Discount-based filtering
-* Brand-specific product search
-* Product catalog exploration
-
-### 🧠 Intelligent Routing
-
-* Semantic Router automatically classifies user queries
-* FAQ queries routed to ChromaDB
-* Product queries routed to SQLite
-* Improves response quality and efficiency
-
-### 💬 Modern Chat Interface
-
-* Responsive HTML/CSS/JavaScript frontend
-* Real-time chat experience
-* Quick reply suggestions
-* Loading indicators
-* Mobile-friendly design
+### 💬 Chat Interface
+- Modern UI
+- Responsive Design
+- Real-Time Responses
+- Quick Reply Suggestions
 
 ---
 
-## 🏗 System Architecture
+## 🏗 Architecture
 
 ```text
 User Query
-     │
-     ▼
-Frontend (HTML/CSS/JavaScript)
-     │
-     ▼
+    │
+    ▼
+Frontend (HTML/CSS/JS)
+    │
+    ▼
 FastAPI Backend
-     │
-     ▼
+    │
+    ▼
 Semantic Router
-     │
- ┌───┴───────────────┐
- │                   │
- ▼                   ▼
+ ┌──────────────┬──────────────┐
+ │              │
+ ▼              ▼
 
-FAQ Route       Product Route
- │                   │
- ▼                   ▼
+FAQ Route   Product Route
 
-ChromaDB         SQLite
-(Vector DB)    (Product DB)
+ │              │
+ ▼              ▼
 
- │                   │
- ▼                   ▼
+ChromaDB     SQLite
 
-Groq Llama 3.3  Groq Llama 3.3
-     │
-     ▼
-Final Response
+ │              │
+ ▼              ▼
+
+Groq LLM    Groq LLM
+
+ │
+ ▼
+
+Response
 ```
 
 ---
 
-## 🛠 Technology Stack
+## 🛠 Tech Stack
 
 ### Backend
-
-* FastAPI
-* Python 3.12
+- Python
+- FastAPI
 
 ### AI & NLP
+- Groq Llama 3.3
+- Semantic Router
+- Sentence Transformers
+- all-MiniLM-L6-v2
 
-* Groq Llama 3.3
-* Semantic Router
-* Sentence Transformers
-* all-MiniLM-L6-v2 Embeddings
-
-### Databases
-
-* ChromaDB (Vector Database)
-* SQLite (Product Database)
+### Database
+- SQLite
+- ChromaDB
 
 ### Frontend
-
-* HTML5
-* CSS3
-* JavaScript (ES6)
-
-### Additional Libraries
-
-* Pandas
-* Jinja2
-* Uvicorn
-* Python Dotenv
-
----
-
-## 📂 Project Structure
-
-```text
-AI-ECommerce-Chatbot
-│
-├── app
-│   ├── resources
-│   │   ├── faq.py
-│   │   ├── router.py
-│   │   └── sql.py
-│   │
-│   ├── static
-│   │   ├── style.css
-│   │   └── script.js
-│   │
-│   ├── templates
-│   │   └── index.html
-│
-├── chroma_db
-├── db.sqlite
-├── requirements.txt
-├── main.py
-└── .gitignore
-```
+- HTML
+- CSS
+- JavaScript
 
 ---
 
@@ -146,13 +107,13 @@ AI-ECommerce-Chatbot
 
 ---
 
-### FAQ and Product Query
+### FAQ & Product Search
 
 ![FAQ Product Query](screenshots/faq-product-query.png)
 
 ---
 
-### Rating Query
+### Product Rating Query
 
 ![Rating Query](screenshots/rating-query.png)
 
@@ -167,7 +128,6 @@ What is the return policy?
 How long does a refund take?
 What payment methods are accepted?
 Can I pay using UPI?
-How can I track my order?
 ```
 
 ### Product Queries
@@ -176,63 +136,41 @@ How can I track my order?
 Show products under 1000
 Show products with rating above 4
 Show discounted products
-Show products by brand Abros
-Show top rated products
+Show Abros products
 ```
 
 ---
 
-## ⚙️ Installation & Setup
+## ⚙ Installation
 
-### 1. Clone Repository
+### Clone Repository
 
 ```bash
 git clone https://github.com/sumedhdikshit-blip/E-Commerce-Product-FAQ-Assistant.git
-cd E-Commerce-Product-FAQ-Assistant
 ```
 
-### 2. Create Virtual Environment
-
-```bash
-python -m venv venv
-```
-
-### 3. Activate Virtual Environment
-
-#### Windows
-
-```bash
-venv\Scripts\activate
-```
-
-#### Linux / macOS
-
-```bash
-source venv/bin/activate
-```
-
-### 4. Install Dependencies
+### Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 5. Configure Environment Variables
+### Configure Environment Variables
 
-Create a `.env` file in the project root.
+Create `.env`
 
 ```env
-GROQ_API_KEY=your_groq_api_key
+GROQ_API_KEY=YOUR_API_KEY
 GROQ_MODEL=llama-3.3-70b-versatile
 ```
 
-### 6. Run Application
+### Run
 
 ```bash
 uvicorn main:app --reload
 ```
 
-### 7. Open Browser
+### Open
 
 ```text
 http://127.0.0.1:8000
@@ -240,51 +178,26 @@ http://127.0.0.1:8000
 
 ---
 
-## 🔍 How It Works
+## 📚 Learning Outcomes
 
-### FAQ Flow
-
-1. User asks a support question.
-2. Semantic Router classifies it as FAQ.
-3. Relevant FAQ entries are retrieved from ChromaDB.
-4. Context is passed to Groq Llama 3.3.
-5. Grounded answer is generated.
-
-### Product Flow
-
-1. User asks about products.
-2. Semantic Router classifies it as Product Query.
-3. SQLite database is searched.
-4. Product information is formatted.
-5. Response is returned to the user.
-
----
-
-## 🎯 Key Learning Outcomes
-
-* Retrieval-Augmented Generation (RAG)
-* Vector Databases
-* Semantic Routing
-* FastAPI Development
-* LLM Integration
-* Embedding Models
-* Frontend-Backend Integration
-* AI-powered Search Systems
+- Retrieval Augmented Generation (RAG)
+- Vector Databases
+- Semantic Search
+- FastAPI Development
+- LLM Integration
+- Frontend-Backend Integration
 
 ---
 
 ## 🚀 Future Enhancements
 
-* Product recommendation engine
-* User authentication
-* Chat history persistence
-* Voice-enabled chatbot
-* Multi-language support
-* Docker containerization
-* Cloud deployment (AWS / Azure / GCP)
-* Admin dashboard
-* Product comparison feature
-* Analytics dashboard
+- Product Recommendation Engine
+- User Authentication
+- Chat History
+- Voice Assistant
+- Docker Support
+- Cloud Deployment
+- Multi-Language Support
 
 ---
 
@@ -296,6 +209,4 @@ GitHub: https://github.com/sumedhdikshit-blip
 
 ---
 
-## ⭐ Support
-
-If you found this project useful, consider giving it a ⭐ on GitHub.
+⭐ If you found this project useful, consider starring the repository.
