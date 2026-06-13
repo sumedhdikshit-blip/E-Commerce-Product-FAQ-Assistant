@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shop Assistant</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <main class="chat-app" aria-label="E-commerce chatbot">
+    <section class="chat-shell">
+
+      <header class="chat-header">
+        <div class="brand">
+          <span class="brand-mark">🛍️</span>
+          <div>
+            <h1>Shop Assistant</h1>
+            <p>Products · Prices · Orders · Returns · Refunds · Payments</p>
+          </div>
+        </div>
+        <span class="status"><span class="status-dot" aria-hidden="true"></span>Online</span>
+      </header>
+
+      <div class="receipt-divider" aria-hidden="true"></div>
+
+      <section id="chatMessages" class="chat-messages" aria-live="polite">
+        <article class="message bot">
+          <div class="avatar" aria-hidden="true">🤖</div>
+          <div class="bubble">
+            Hi! I can help with product recommendations, prices, availability, orders, returns, refunds, and payment questions.
+            <span class="timestamp">Just now</span>
+          </div>
+        </article>
+
+        <div class="quick-replies" aria-label="Suggested questions">
+          <button type="button" class="quick-reply" data-text="Show me laptops under ₹40,000">Laptops under ₹40,000</button>
+          <button type="button" class="quick-reply" data-text="What is your return policy?">Return policy</button>
+          <button type="button" class="quick-reply" data-text="Track my order">Track my order</button>
+          <button type="button" class="quick-reply" data-text="Do you accept UPI payments?">UPI payments?</button>
+        </div>
+      </section>
+
+      <div id="loadingIndicator" class="loading" hidden aria-label="Assistant is typing">
+        <div class="avatar" aria-hidden="true">🤖</div>
+        <div class="bubble typing-bubble">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="receipt-divider" aria-hidden="true"></div>
+
+      <form id="chatForm" class="chat-form">
+        <label class="sr-only" for="messageInput">Message</label>
+        <input
+          id="messageInput"
+          name="message"
+          type="text"
+          autocomplete="off"
+          placeholder="Ask about laptops under 40000, refunds, UPI..."
+          required
+        />
+        <button id="sendButton" type="submit" aria-label="Send message">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M22 2 11 13"/>
+            <path d="M22 2 15 22 11 13 2 9 22 2Z"/>
+          </svg>
+        </button>
+      </form>
+    </section>
+  </main>
+  <script src="/static/script.js"></script>
+</body>
+</html>
