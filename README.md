@@ -1,47 +1,55 @@
 # 🛒 AI E-Commerce Product & FAQ Assistant
 
-[![Python](https://img.shields.io/badge/Python-3.12-blue)]()
-[![FastAPI](https://img.shields.io/badge/FastAPI-Backend-green)]()
-[![Groq](https://img.shields.io/badge/Groq-LLM-orange)]()
-[![ChromaDB](https://img.shields.io/badge/ChromaDB-VectorDB-purple)]()
-[![SQLite](https://img.shields.io/badge/SQLite-Database-lightgrey)]()
+> An AI-powered E-Commerce Chatbot combining **Semantic Routing**, **Vector Search**, **RAG (Retrieval-Augmented Generation)**, and **Large Language Models** to deliver intelligent FAQ assistance and product discovery.
 
-An AI-powered E-Commerce Chatbot that combines **Semantic Routing**, **Vector Search**, **RAG (Retrieval-Augmented Generation)**, and **Large Language Models** to provide intelligent FAQ assistance and product search capabilities.
+<br>
+
+## 📸 Screenshots
+
+<table>
+  <tr>
+    <td align="center">
+      <img src="screenshots/home-page.png" alt="Home Page" width="300"/><br/>
+      <b>Home Page</b>
+    </td>
+    <td align="center">
+      <img src="screenshots/faq-product-query.png" alt="FAQ & Product Search" width="300"/><br/>
+      <b>FAQ & Product Search</b>
+    </td>
+    <td align="center">
+      <img src="screenshots/rating-query.png" alt="Product Rating Query" width="300"/><br/>
+      <b>Rating-Based Query</b>
+    </td>
+  </tr>
+</table>
+
+<br>
 
 ---
 
 ## 🚀 Features
 
 ### 📖 FAQ Assistant
-- Semantic FAQ Retrieval
-- ChromaDB Vector Search
-- Context-Aware AI Responses
-- Groq Llama 3.3 Integration
+- Semantic FAQ Retrieval using ChromaDB Vector Search
+- Context-aware AI responses powered by Groq Llama 3.3
 
-### 🛍 Product Search
-- SQLite Product Database
-- Product Filtering
-- Rating-Based Search
-- Discount Search
-- Brand Search
-- Price-Based Search
+### 🛍️ Product Search
+- SQLite product database with rich filtering
+- Search by **rating**, **discount**, **brand**, and **price**
 
 ### 🧠 AI Routing
-- Semantic Router
-- Intent Classification
-- Dynamic Query Routing
+- Semantic Router for automatic intent classification
+- Dynamic query routing between FAQ and Product pipelines
 
 ### 💬 Chat Interface
-- Modern UI
-- Responsive Design
-- Real-Time Responses
-- Quick Reply Suggestions
+- Modern, responsive UI with real-time responses
+- Quick reply suggestions for common queries
 
 ---
 
-## 🏗 Architecture
+## 🏗️ Architecture
 
-```text
+```
 User Query
     │
     ▼
@@ -53,86 +61,45 @@ FastAPI Backend
     ▼
 Semantic Router
  ┌──────────────┬──────────────┐
- │              │
- ▼              ▼
-
-FAQ Route   Product Route
-
- │              │
- ▼              ▼
-
-ChromaDB     SQLite
-
- │              │
- ▼              ▼
-
-Groq LLM    Groq LLM
-
+ │                             │
+ ▼                             ▼
+FAQ Route               Product Route
+ │                             │
+ ▼                             ▼
+ChromaDB                    SQLite
+ │                             │
+ ▼                             ▼
+Groq LLM                  Groq LLM
  │
  ▼
-
 Response
 ```
 
 ---
 
-## 🛠 Tech Stack
+## 🛠️ Tech Stack
 
-### Backend
-- Python
-- FastAPI
-
-### AI & NLP
-- Groq Llama 3.3
-- Semantic Router
-- Sentence Transformers
-- all-MiniLM-L6-v2
-
-### Database
-- SQLite
-- ChromaDB
-
-### Frontend
-- HTML
-- CSS
-- JavaScript
-
----
-
-## 📸 Screenshots
-
-### Home Page
-
-![Home Page](screenshots/home-page.png)
-
----
-
-### FAQ & Product Search
-
-![FAQ Product Query](screenshots/faq-product-query.png)
-
----
-
-### Product Rating Query
-
-![Rating Query](screenshots/rating-query.png)
+| Layer | Technologies |
+|-------|-------------|
+| **Backend** | Python, FastAPI |
+| **AI / NLP** | Groq Llama 3.3, Semantic Router, Sentence Transformers (`all-MiniLM-L6-v2`) |
+| **Databases** | SQLite, ChromaDB |
+| **Frontend** | HTML, CSS, JavaScript |
 
 ---
 
 ## 💡 Example Queries
 
-### FAQ Queries
-
-```text
+**FAQ Queries**
+```
 What is the return policy?
 How long does a refund take?
 What payment methods are accepted?
 Can I pay using UPI?
 ```
 
-### Product Queries
-
-```text
+**Product Queries**
+```
 Show products under 1000
 Show products with rating above 4
 Show discounted products
@@ -141,38 +108,33 @@ Show Abros products
 
 ---
 
-## ⚙ Installation
+## ⚙️ Installation
 
-### Clone Repository
-
+### 1. Clone Repository
 ```bash
 git clone https://github.com/sumedhdikshit-blip/E-Commerce-Product-FAQ-Assistant.git
+cd E-Commerce-Product-FAQ-Assistant
 ```
 
-### Install Dependencies
-
+### 2. Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### Configure Environment Variables
-
-Create `.env`
-
+### 3. Configure Environment Variables
+Create a `.env` file in the project root:
 ```env
 GROQ_API_KEY=YOUR_API_KEY
 GROQ_MODEL=llama-3.3-70b-versatile
 ```
 
-### Run
-
+### 4. Run
 ```bash
 uvicorn main:app --reload
 ```
 
-### Open
-
-```text
+### 5. Open in Browser
+```
 http://127.0.0.1:8000
 ```
 
@@ -180,33 +142,30 @@ http://127.0.0.1:8000
 
 ## 📚 Learning Outcomes
 
-- Retrieval Augmented Generation (RAG)
-- Vector Databases
-- Semantic Search
-- FastAPI Development
-- LLM Integration
-- Frontend-Backend Integration
+- Retrieval-Augmented Generation (RAG)
+- Vector Databases & Semantic Search
+- FastAPI Backend Development
+- LLM Integration with Groq
+- Semantic Routing & Intent Classification
+- Full-stack Frontend–Backend Integration
 
 ---
 
 ## 🚀 Future Enhancements
 
-- Product Recommendation Engine
-- User Authentication
-- Chat History
-- Voice Assistant
-- Docker Support
-- Cloud Deployment
-- Multi-Language Support
+- [ ] Product Recommendation Engine
+- [ ] User Authentication & Chat History
+- [ ] Voice Assistant Support
+- [ ] Docker Support & Cloud Deployment
+- [ ] Multi-Language Support
 
 ---
 
 ## 👨‍💻 Author
 
-**Sumedh Dikshit**
-
-GitHub: https://github.com/sumedhdikshit-blip
+**Sumedh Dikshit**  
+GitHub: [@sumedhdikshit-blip](https://github.com/sumedhdikshit-blip)
 
 ---
 
-⭐ If you found this project useful, consider starring the repository.
+⭐ *If you found this project useful, consider starring the repository!*
