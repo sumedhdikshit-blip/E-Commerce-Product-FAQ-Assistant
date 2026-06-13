@@ -1,6 +1,6 @@
 # 🛒 AI E-Commerce Product & FAQ Assistant
 
-> An AI-powered E-Commerce Chatbot combining **Semantic Routing**, **Vector Search**, **RAG (Retrieval-Augmented Generation)**, and **Large Language Models** to deliver intelligent FAQ assistance and product discovery.
+> An AI-powered chatbot that combines **Semantic Routing**, **Vector Search**, **RAG (Retrieval-Augmented Generation)**, and **Large Language Models** to deliver intelligent product discovery and instant FAQ resolution.
 
 <br>
 
@@ -30,20 +30,20 @@
 ## 🚀 Features
 
 ### 📖 FAQ Assistant
-- Semantic FAQ Retrieval using ChromaDB Vector Search
-- Context-aware AI responses powered by Groq Llama 3.3
+- Retrieves accurate answers using **ChromaDB vector search**
+- Generates context-aware responses via **Groq Llama 3.3**
 
 ### 🛍️ Product Search
-- SQLite product database with rich filtering
-- Search by **rating**, **discount**, **brand**, and **price**
+- Structured product catalog backed by **SQLite**
+- Filter by **price**, **rating**, **discount**, and **brand**
 
-### 🧠 AI Routing
-- Semantic Router for automatic intent classification
-- Dynamic query routing between FAQ and Product pipelines
+### 🧠 Intelligent Routing
+- **Semantic Router** automatically classifies user intent
+- Dynamically routes queries to the FAQ or Product pipeline
 
 ### 💬 Chat Interface
-- Modern, responsive UI with real-time responses
-- Quick reply suggestions for common queries
+- Clean, responsive UI with **real-time responses**
+- Quick reply suggestions to guide the conversation
 
 ---
 
@@ -53,23 +53,23 @@
 User Query
     │
     ▼
-Frontend (HTML/CSS/JS)
+Frontend (HTML / CSS / JS)
     │
     ▼
 FastAPI Backend
     │
     ▼
 Semantic Router
- ┌──────────────┬──────────────┐
- │                             │
- ▼                             ▼
-FAQ Route               Product Route
- │                             │
- ▼                             ▼
-ChromaDB                    SQLite
- │                             │
- ▼                             ▼
-Groq LLM                  Groq LLM
+ ┌──────────────────┬──────────────────┐
+ │                                     │
+ ▼                                     ▼
+FAQ Route                        Product Route
+ │                                     │
+ ▼                                     ▼
+ChromaDB                            SQLite
+ │                                     │
+ ▼                                     ▼
+Groq LLM                           Groq LLM
  │
  ▼
 Response
@@ -80,7 +80,7 @@ Response
 ## 🛠️ Tech Stack
 
 | Layer | Technologies |
-|-------|-------------|
+|---|---|
 | **Backend** | Python, FastAPI |
 | **AI / NLP** | Groq Llama 3.3, Semantic Router, Sentence Transformers (`all-MiniLM-L6-v2`) |
 | **Databases** | SQLite, ChromaDB |
@@ -90,7 +90,7 @@ Response
 
 ## 💡 Example Queries
 
-**FAQ Queries**
+**FAQ**
 ```
 What is the return policy?
 How long does a refund take?
@@ -98,9 +98,9 @@ What payment methods are accepted?
 Can I pay using UPI?
 ```
 
-**Product Queries**
+**Product Search**
 ```
-Show products under 1000
+Show products under ₹1000
 Show products with rating above 4
 Show discounted products
 Show Abros products
@@ -108,64 +108,64 @@ Show Abros products
 
 ---
 
-## ⚙️ Installation
+## ⚙️ Getting Started
 
-### 1. Clone Repository
+**1. Clone the repository**
 ```bash
 git clone https://github.com/sumedhdikshit-blip/E-Commerce-Product-FAQ-Assistant.git
 cd E-Commerce-Product-FAQ-Assistant
 ```
 
-### 2. Install Dependencies
+**2. Install dependencies**
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Configure Environment Variables
+**3. Set up environment variables**
+
 Create a `.env` file in the project root:
 ```env
 GROQ_API_KEY=YOUR_API_KEY
 GROQ_MODEL=llama-3.3-70b-versatile
 ```
 
-### 4. Run
+**4. Start the server**
 ```bash
 uvicorn main:app --reload
 ```
 
-### 5. Open in Browser
+**5. Open in your browser**
 ```
 http://127.0.0.1:8000
 ```
 
 ---
 
-## 📚 Learning Outcomes
+## 📚 What I Learned
 
-- Retrieval-Augmented Generation (RAG)
-- Vector Databases & Semantic Search
-- FastAPI Backend Development
-- LLM Integration with Groq
-- Semantic Routing & Intent Classification
-- Full-stack Frontend–Backend Integration
+- Building end-to-end **RAG pipelines** with vector databases
+- **Semantic search** using ChromaDB and Sentence Transformers
+- **Intent classification** and dynamic routing with Semantic Router
+- Integrating **LLMs via Groq API** into production-ready backends
+- Developing **FastAPI** REST services with a clean frontend
 
 ---
 
-## 🚀 Future Enhancements
+## 🔮 Future Enhancements
 
 - [ ] Product Recommendation Engine
 - [ ] User Authentication & Chat History
 - [ ] Voice Assistant Support
-- [ ] Docker Support & Cloud Deployment
+- [ ] Docker & Cloud Deployment
 - [ ] Multi-Language Support
 
 ---
 
 ## 👨‍💻 Author
 
-**Sumedh Dikshit**  
+**Sumedh Dikshit**
 GitHub: [@sumedhdikshit-blip](https://github.com/sumedhdikshit-blip)
 
 ---
 
-⭐ *If you found this project useful, consider starring the repository!*
+⭐ *Found this useful? Consider starring the repository!*
