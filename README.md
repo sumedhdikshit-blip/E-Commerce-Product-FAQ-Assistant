@@ -1,8 +1,20 @@
+<div align="center">
+
 # 🛒 AI E-Commerce Product & FAQ Assistant
 
-> An AI-powered chatbot that combines **Semantic Routing**, **Vector Search**, **RAG (Retrieval-Augmented Generation)**, and **Large Language Models** to deliver intelligent product discovery and instant FAQ resolution.
+**An AI-powered chatbot that combines Semantic Routing, Vector Search, RAG, and Large Language Models to deliver intelligent product discovery and instant FAQ resolution.**
 
-<br>
+<br/>
+
+![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Groq](https://img.shields.io/badge/Groq-Llama%203.3-F55036?style=for-the-badge)
+![ChromaDB](https://img.shields.io/badge/ChromaDB-Vector%20DB-orange?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+
+</div>
+
+---
 
 ## 📸 Screenshots
 
@@ -23,27 +35,16 @@
   </tr>
 </table>
 
-<br>
-
 ---
 
 ## 🚀 Features
 
-### 📖 FAQ Assistant
-- Retrieves accurate answers using **ChromaDB vector search**
-- Generates context-aware responses via **Groq Llama 3.3**
-
-### 🛍️ Product Search
-- Structured product catalog backed by **SQLite**
-- Filter by **price**, **rating**, **discount**, and **brand**
-
-### 🧠 Intelligent Routing
-- **Semantic Router** automatically classifies user intent
-- Dynamically routes queries to the FAQ or Product pipeline
-
-### 💬 Chat Interface
-- Clean, responsive UI with **real-time responses**
-- Quick reply suggestions to guide the conversation
+| | Feature | Description |
+|---|---|---|
+| 📖 | **FAQ Assistant** | Retrieves accurate answers using ChromaDB vector search with context-aware responses via Groq Llama 3.3 |
+| 🛍️ | **Product Search** | Filter products by **price**, **rating**, **discount**, and **brand** from a structured SQLite catalog |
+| 🧠 | **Intelligent Routing** | Semantic Router auto-classifies user intent and dynamically routes to the right pipeline |
+| 💬 | **Chat Interface** | Clean, responsive UI with real-time responses and quick reply suggestions |
 
 ---
 
@@ -60,16 +61,16 @@ FastAPI Backend
     │
     ▼
 Semantic Router
- ┌──────────────────┬──────────────────┐
- │                                     │
- ▼                                     ▼
-FAQ Route                        Product Route
- │                                     │
- ▼                                     ▼
-ChromaDB                            SQLite
- │                                     │
- ▼                                     ▼
-Groq LLM                           Groq LLM
+ ┌──────────────────────┬──────────────────────┐
+ │                                             │
+ ▼                                             ▼
+FAQ Route                               Product Route
+ │                                             │
+ ▼                                             ▼
+ChromaDB                                    SQLite
+ │                                             │
+ ▼                                             ▼
+Groq LLM                                   Groq LLM
  │
  ▼
 Response
@@ -90,7 +91,11 @@ Response
 
 ## 💡 Example Queries
 
-**FAQ**
+<table>
+<tr>
+<td>
+
+**📖 FAQ Queries**
 ```
 What is the return policy?
 How long does a refund take?
@@ -98,13 +103,20 @@ What payment methods are accepted?
 Can I pay using UPI?
 ```
 
-**Product Search**
+</td>
+<td>
+
+**🛍️ Product Queries**
 ```
 Show products under ₹1000
 Show products with rating above 4
 Show discounted products
 Show Abros products
 ```
+
+</td>
+</tr>
+</table>
 
 ---
 
@@ -163,9 +175,12 @@ http://127.0.0.1:8000
 
 ## 👨‍💻 Author
 
-**Sumedh Dikshit**
-GitHub: [@sumedhdikshit-blip](https://github.com/sumedhdikshit-blip)
+<div align="center">
 
----
+**Sumedh Dikshit**
+
+[![GitHub](https://img.shields.io/badge/GitHub-sumedhdikshit--blip-181717?style=for-the-badge&logo=github)](https://github.com/sumedhdikshit-blip)
 
 ⭐ *Found this useful? Consider starring the repository!*
+
+</div>
